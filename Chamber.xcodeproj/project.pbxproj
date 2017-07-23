@@ -10,6 +10,7 @@
 		46465B3C1F253729008136C8 /* Chamber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 46465B321F253729008136C8 /* Chamber.framework */; };
 		46465B411F253729008136C8 /* ChamberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46465B401F253729008136C8 /* ChamberTests.swift */; };
 		46465B431F253729008136C8 /* Chamber.h in Headers */ = {isa = PBXBuildFile; fileRef = 46465B351F253729008136C8 /* Chamber.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		46465B881F253F68008136C8 /* ChamberClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46465B871F253F68008136C8 /* ChamberClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		46465B3B1F253729008136C8 /* ChamberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChamberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		46465B401F253729008136C8 /* ChamberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChamberTests.swift; sourceTree = "<group>"; };
 		46465B421F253729008136C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		46465B871F253F68008136C8 /* ChamberClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChamberClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				46465B4C1F253748008136C8 /* Supporting Files */,
+				46465B871F253F68008136C8 /* ChamberClient.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				TargetAttributes = {
 					46465B311F253729008136C8 = {
 						CreatedOnToolsVersion = 9.0;
+						LastSwiftMigration = 0900;
 					};
 					46465B3A1F253729008136C8 = {
 						CreatedOnToolsVersion = 9.0;
@@ -202,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46465B881F253F68008136C8 /* ChamberClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +341,7 @@
 		46465B471F253729008136C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ZY7497MHJE;
@@ -348,6 +354,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = it.gopher.Chamber;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -356,6 +363,7 @@
 		46465B481F253729008136C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = ZY7497MHJE;
@@ -376,6 +384,7 @@
 		46465B4A1F253729008136C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = ZY7497MHJE;
 				INFOPLIST_FILE = ChamberTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -389,6 +398,7 @@
 		46465B4B1F253729008136C8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = ZY7497MHJE;
 				INFOPLIST_FILE = ChamberTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -418,6 +428,7 @@
 				46465B481F253729008136C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		46465B491F253729008136C8 /* Build configuration list for PBXNativeTarget "ChamberTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +437,7 @@
 				46465B4B1F253729008136C8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

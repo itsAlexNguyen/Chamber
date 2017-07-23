@@ -7,7 +7,25 @@
 		<key>ChamberExample.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>5</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>46465B551F2538E9008136C8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>46465B691F2538EA008136C8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>46465B741F2538EA008136C8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

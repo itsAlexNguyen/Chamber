@@ -6,6 +6,7 @@ target 'ChamberExample' do
   use_frameworks!
 
   # Pods for ChamberExample
+  pod 'Chamber', :path => "../"
 
   target 'ChamberExampleTests' do
     inherit! :search_paths

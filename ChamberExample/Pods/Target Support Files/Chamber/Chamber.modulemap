@@ -1,0 +1,6 @@
+framework module Chamber {
+  umbrella header "Chamber-umbrella.h"
+
+  export *
+  module * { export * }
+}

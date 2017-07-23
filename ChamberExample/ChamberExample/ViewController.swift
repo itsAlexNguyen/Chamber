@@ -7,12 +7,17 @@
 //
 
 import UIKit
+import Chamber
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        if let settings = ChamberClient.Settings(baseUrl: "https://randomuser.me/") {
+            let client = ChamberClient(using: settings)
+            client.request("api/", callback: HttpCallback<JSONDecodeable>())
+        }
     }
 
     override func didReceiveMemoryWarning() {
