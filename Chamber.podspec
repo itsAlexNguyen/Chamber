@@ -12,10 +12,10 @@ Pod::Spec.new do |s|
   s.summary      = "Network client that returns a Swift Object"
   s.description  = "Chamber is a wrapper around Alamofire that returns a Swift Object as a response."
   s.homepage     = "https://github.com/itsAlexNguyen/Chamber"
-  s.license      = { :type => "MIT" }
+  s.license      = { :type => "MIT", :file => "License.md" }
   s.author       = { "Alex Nguyen" => "hello@gopher.it" }
   s.ios.deployment_target = '8.0'
   s.source       = { :git => "https://github.com/itsAlexNguyen/Chamber.git", :tag => s.version }
-  s.source_files = "Source/**/*.{swift}"
+  s.source_files = 'Source/'
 
 end
