@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class HttpCallback<T> {
+public class HttpCallback<T: JSONDecodeable> {
     public typealias SuccessBlock = (T) -> Void
     public typealias FailureBlock = (Error) -> Void
     
@@ -20,13 +20,13 @@ public class HttpCallback<T> {
     }
     
     public func onSuccess(_ response: String) {
-//        if let object = instantiateObject(json: response) {
-//            DispatchQueue.main.async {
-//                self.successBlock(object)
-//            }
-//        } else {
-//            // TODO : Display JSON parsing error
-//        }
+        if let object = instantiateObject(json: response) {
+            DispatchQueue.main.async {
+                self.successBlock(object)
+            }
+        } else {
+            // TODO : Display JSON parsing error
+        }
     }
     public func onFailure(_ error: Error) {
         DispatchQueue.main.async {
@@ -34,8 +34,7 @@ public class HttpCallback<T> {
         }
     }
     
-//    private func instantiateObject(json jsonStr: String) -> T? {
-//
-//        return T(json: jsonStr)
-//    }
+    private func instantiateObject(json jsonStr: String) -> T? {
+        return T(json: jsonStr)
+    }
 }
