@@ -31,6 +31,8 @@
 		46465B401F253729008136C8 /* ChamberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChamberTests.swift; sourceTree = "<group>"; };
 		46465B421F253729008136C8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		46465B871F253F68008136C8 /* ChamberClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChamberClient.swift; sourceTree = "<group>"; };
+		46BB8CFB1F255F4900882363 /* JSONDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDecodable.swift; sourceTree = "<group>"; };
+		46BB8CFC1F255F4900882363 /* HttpCallback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpCallback.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,8 @@
 		46465B341F253729008136C8 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				46BB8CFC1F255F4900882363 /* HttpCallback.swift */,
+				46BB8CFB1F255F4900882363 /* JSONDecodable.swift */,
 				46465B4C1F253748008136C8 /* Supporting Files */,
 				46465B871F253F68008136C8 /* ChamberClient.swift */,
 			);

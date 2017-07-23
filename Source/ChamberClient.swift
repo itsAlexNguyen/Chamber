@@ -16,13 +16,13 @@ public class ChamberClient {
         self.settings = settings
     }
     
-    public func request(
+    public func request<T>(
         _ path: String,
         method: HTTPMethod = .get,
         parameters: Parameters? = nil,
         encoding: ParameterEncoding = URLEncoding.default,
         headers: HTTPHeaders? = nil,
-        callback: HttpCallback<JSONDecodeable>) {
+        callback: HttpCallback<T>) {
         if (settings.enableStubbing) {
             // TODO : Return stubbed object
         } else {

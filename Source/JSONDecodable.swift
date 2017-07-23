@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class JSONDecodeable {
+open class JSONDecodeable {
     required public init?(json: String) {
         
     }
