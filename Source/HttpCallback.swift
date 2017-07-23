@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 public class HttpCallback<T: JSONDecodeable> {
     public typealias SuccessBlock = (T) -> Void
@@ -19,7 +20,7 @@ public class HttpCallback<T: JSONDecodeable> {
         self.failureBlock = failureBlock
     }
     
-    public func onSuccess(_ response: String) {
+    public func onSuccess(_ response: JSON) {
         if let object = instantiateObject(json: response) {
             DispatchQueue.main.async {
                 self.successBlock(object)
@@ -34,7 +35,7 @@ public class HttpCallback<T: JSONDecodeable> {
         }
     }
     
-    private func instantiateObject(json jsonStr: String) -> T? {
-        return T(json: jsonStr)
+    private func instantiateObject(json: JSON) -> T? {
+        return T(json: json)
     }
 }

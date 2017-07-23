@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 public class ChamberClient {
     private let settings: Settings
@@ -26,11 +27,11 @@ public class ChamberClient {
         if (settings.enableStubbing) {
             // TODO : Return stubbed object
         } else {
-            Alamofire.request(settings.baseUrl + path, method: method, parameters: parameters, encoding: encoding, headers: headers).responseJSON(completionHandler: { (response) in
+            Alamofire.request(settings.baseUrl + path, method: method, parameters: parameters, encoding: encoding, headers: headers).responseJSON(completionHandler: { response in
                 switch response.result {
                 case .success(let json):
-                    // TODO - Handle successful call
-                   callback.onSuccess(json as? String ?? "")
+                    print(json)
+                    callback.onSuccess(JSON(json))
                 case .failure(let error):
                     // TODO - Handle Failure
                     print("ERROR!" + error.localizedDescription)

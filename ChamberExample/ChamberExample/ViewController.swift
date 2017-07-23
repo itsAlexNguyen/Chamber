@@ -13,9 +13,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        if let settings = ChamberClient.Settings(baseUrl: "https://randomuser.me/") {
+        if let settings = ChamberClient.Settings(baseUrl: "https://randomuser.me") {
             let client = ChamberClient(using: settings)
-            client.request("api/", callback: HttpCallback<MyUser>(onSucces: { (response) in
+            client.request("/api/", callback: HttpCallback<RandomUserResponse>(onSucces: { (response) in
                 
             }, onFailure: { (error) in
                 // TODO

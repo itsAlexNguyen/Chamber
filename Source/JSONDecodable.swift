@@ -6,9 +6,10 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 open class JSONDecodeable {
-    required public init?(json: String) {
+    required public init?(json: JSON) {
         
     }
 }

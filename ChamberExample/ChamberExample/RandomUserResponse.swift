@@ -8,9 +8,13 @@
 
 import Foundation
 import Chamber
+import SwiftyJSON
 
-class MyUser: JSONDecodeable {
-    required init?(json: String) {
+class RandomUserResponse: JSONDecodeable {
+    let results : [User]
+    
+    required init?(json: JSON) {
+        results = json["results"].arrayValue.flatMap( { return User(json: $0) })
         super.init(json: json)
     }
 }
