@@ -53,7 +53,7 @@
 		46465B281F253729008136C8 = {
 			isa = PBXGroup;
 			children = (
-				46465B341F253729008136C8 /* Chamber */,
+				46465B341F253729008136C8 /* Source */,
 				46465B3F1F253729008136C8 /* ChamberTests */,
 				46465B331F253729008136C8 /* Products */,
 			);
@@ -68,13 +68,12 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		46465B341F253729008136C8 /* Chamber */ = {
+		46465B341F253729008136C8 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				46465B351F253729008136C8 /* Chamber.h */,
-				46465B361F253729008136C8 /* Info.plist */,
+				46465B4C1F253748008136C8 /* Supporting Files */,
 			);
-			path = Chamber;
+			path = Source;
 			sourceTree = "<group>";
 		};
 		46465B3F1F253729008136C8 /* ChamberTests */ = {
@@ -84,6 +83,15 @@
 				46465B421F253729008136C8 /* Info.plist */,
 			);
 			path = ChamberTests;
+			sourceTree = "<group>";
+		};
+		46465B4C1F253748008136C8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				46465B351F253729008136C8 /* Chamber.h */,
+				46465B361F253729008136C8 /* Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,7 +342,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Chamber/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.gopher.Chamber;
@@ -354,7 +362,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Chamber/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Source/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = it.gopher.Chamber;
