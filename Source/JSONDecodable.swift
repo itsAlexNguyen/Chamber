@@ -10,6 +10,6 @@ import SwiftyJSON
 
 open class JSONDecodeable {
     required public init?(json: JSON) {
-        
+        // To be implemented by sub-classes
     }
 }

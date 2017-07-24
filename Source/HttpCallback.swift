@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Chamber
 import SwiftyJSON
 
 public class HttpCallback<T: JSONDecodeable> {
@@ -26,7 +27,7 @@ public class HttpCallback<T: JSONDecodeable> {
                 self.successBlock(object)
             }
         } else {
-            // TODO : Display JSON parsing error
+            
         }
     }
     public func onFailure(_ error: Error) {

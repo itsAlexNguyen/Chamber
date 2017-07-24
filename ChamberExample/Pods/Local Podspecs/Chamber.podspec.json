@@ -18,7 +18,7 @@
     "git": "https://github.com/itsAlexNguyen/Chamber.git",
     "tag": "0.0.2"
   },
-  "source_files": "Source/*",
+  "source_files": "Source/",
   "dependencies": {
     "Alamofire": [
       "~> 4.4.0"
