@@ -15,7 +15,7 @@ public class HttpCallback<T: JSONDecodeable> {
     private let successBlock: SuccessBlock
     private let failureBlock: FailureBlock
     
-    required public init(onSucces successBlock: @escaping SuccessBlock, onFailure failureBlock: @escaping FailureBlock) {
+    required public init(onSuccess successBlock: @escaping SuccessBlock, onFailure failureBlock: @escaping FailureBlock) {
         self.successBlock = successBlock
         self.failureBlock = failureBlock
     }
