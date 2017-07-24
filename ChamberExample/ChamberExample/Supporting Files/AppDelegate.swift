@@ -7,15 +7,16 @@
 //
 
 import UIKit
+import Chamber
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var networkSettings: ChamberClient.Settings!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        networkSettings = ChamberClient.Settings(baseUrl: "https://randomuser.me")!
         return true
     }
 

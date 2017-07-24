@@ -27,7 +27,7 @@ public class ChamberClient {
         if (settings.enableStubbing) {
             // TODO : Return stubbed object
         } else {
-            Alamofire.request(settings.baseUrl + path, method: method, parameters: parameters, encoding: encoding, headers: headers).responseJSON(completionHandler: { response in
+            Alamofire.request("\(settings.baseUrl)/\(path)", method: method, parameters: parameters, encoding: encoding, headers: headers).responseJSON(completionHandler: { response in
                 switch response.result {
                 case .success(let json):
                     print(json)
