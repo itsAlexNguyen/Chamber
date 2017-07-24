@@ -27,16 +27,25 @@ public class ChamberClient {
         if (settings.enableStubbing) {
             // TODO : Return stubbed object
         } else {
-            Alamofire.request("\(settings.baseUrl)/\(path)", method: method, parameters: parameters, encoding: encoding, headers: headers).responseJSON(completionHandler: { response in
+            let request = Alamofire.request("\(settings.baseUrl)/\(path)", method: method, parameters: parameters, encoding: encoding, headers: headers).responseJSON(completionHandler: { [weak self] response in
+                guard let strongSelf = self else { return }
+                strongSelf.logResponse(response: response)
                 switch response.result {
                 case .success(let json):
-                    print(json)
                     callback.onSuccess(JSON(json))
                 case .failure(let error):
-                    // TODO - Handle Failure
-                    print("ERROR!" + error.localizedDescription)
+                    callback.onFailure(error)
                 }
             })
+            guard settings.logRequests else { return }
+            print("[CHAMBER CLIENT] REQUEST : \(request)")
+        }
+    }
+    
+    private func logResponse(response: DataResponse<Any>) {
+        guard settings.logRequests else { return }
+        if let responseStr = response.result.value {
+            print("[CHAMBER CLIENT] RESPONSE : \(responseStr)")
         }
     }
     

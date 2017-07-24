@@ -14,7 +14,10 @@ class RandomUserResponse: JSONDecodeable {
     let results : [User]
     
     required init?(json: JSON) {
-        results = json["results"].arrayValue.flatMap( { return User(json: $0) })
+        guard let results = json["results"].array else {
+            return nil
+        }
+        self.results = results.flatMap( { return User(json: $0) })
         super.init(json: json)
     }
 }

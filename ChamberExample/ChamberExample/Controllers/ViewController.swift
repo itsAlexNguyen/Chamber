@@ -19,7 +19,9 @@ class ViewController: BaseNetworkViewController {
         networkClient.request(RestEndpoints.singleUser,
                               callback: HttpCallback<RandomUserResponse>(onSuccess: { (response) in
             // New response is object type RandomUserResponse
-                                
+            for user in response.results {
+                print("\(user.cell)  \(user.dobOfBirth)  \(user.email)")
+            }
         }, onFailure: { (error) in
             // TODO - Handle error
         }))

@@ -12,9 +12,19 @@ import SwiftyJSON
 
 class User: JSONDecodeable {
     let cell: String
+    let dobOfBirth: String
+    let email: String
     
     required init?(json: JSON) {
-        cell = json["cell"].stringValue
+        // Make sure all values are there
+        guard let cell = json["cell"].string,
+        let dob = json["dob"].string,
+        let email = json["email"].string
+            else { return nil }
+        
+        self.cell = cell
+        self.dobOfBirth = dob
+        self.email = email
         super.init(json: json)
     }
 }
